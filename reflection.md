@@ -26,10 +26,8 @@
   - ChatGPT added file-based persistence that worked cross-browser and fit the UI.
 
 **Prompts that Mis-fired:**
-- “Implement the same app with React + Vite in **one** file.”
-  - ChatGPT mixed React and vanilla JS, which was unusable without a build step. I reverted to plain JS for simplicity.
-- “Give me the full Gosper Glider Gun coordinates.”
-  - Output was too large and not practical for the 40×40 grid; I switched to smaller, classic patterns.
+- “Here’s the assignment file – just **solve** it for me.”
+  - ChatGPT produced a rough outline that looked complete at first glance, but several core functions were only stubbed out (“TODO” comments) and some UI controls were missing. In other words, the tool left noticeable “holes” that I still had to fill manually.
 
 ---
 
@@ -42,32 +40,31 @@
   - Documentation generation
 - Weaknesses:
   - Sometimes mixes paradigms (OO vs functional)
-  - Can't run or debug code
+  - Can't run or debug code 
 - Most helpful for:
-  - Initial MVC structure
+  - Initial MVC structure (very good)
   - Pattern data
-  - Drafting this reflection
+  - Drafting this reflection ;)
 - Fell short when:
-  - Needed DOM performance tuning and edge-case bug fixes
+  loosing context over time
 - Notable limitations:
-  - No live preview or debugging
-  - Can’t optimize for large grids
+  - No debugging
+  - Can’t optimize for large file structre
 
-**GitHub Copilot:**
+**GitHub Copilot (agent mode):**
 - Strengths:
   - Fast single-line completions
   - Quick tweaks and doc edits
 - Weaknesses:
-  - Lacks project-wide context
   - Not helpful for large refactors
 - Most helpful for:
   - Polishing README
   - Adding comments
   - Minor code fixes
 - Fell short when:
-  - Couldn’t infer architectural intent or fix cross-file issues
+  - Couldn’t vibe coded
 - Notable limitations:
-  - Sometimes inconsistent with naming or context
+  - loosing context fast
 
 **Iterations:**
 - 5 main loops (scaffold → styling → patterns → save/load → polish) plus many micro Copilot completions.
