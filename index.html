@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Assisted Conway’s Game of Life</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Conway’s Game of Life</h1>
+
+    <section id="controls">
+      <button id="btn-toggle">Start</button>
+      <button id="btn-random">Randomize</button>
+      <button id="btn-clear">Clear</button>
+
+      <label>
+        Speed (ms):
+        <input type="range" id="speed" min="50" max="1000" step="50" value="200" />
+        <span id="speed-display">200</span>
+      </label>
+
+      <label>
+        Grid Size:
+        <input type="number" id="size" min="10" max="100" value="40" />
+      </label>
+
+      <label>
+        Pattern Library:
+        <select id="pattern-select">
+          <option value="glider">Glider</option>
+          <option value="blinker">Blinker</option>
+          <option value="toad">Toad</option>
+          <option value="beacon">Beacon</option>
+          <option value="pulsar">Pulsar</option>
+          <option value="lwss">Lightweight Spaceship</option>
+        </select>
+      </label>
+
+      <button id="btn-apply-pattern">Insert Pattern</button>
+      <button id="btn-save">💾 Save</button>
+      <button id="btn-load">📂 Load</button>
+    </section>
+
+    <div id="board"></div>
+
+    <footer>
+      <small>
+        Built with vanilla&nbsp;JS • MVC style • AI-assisted (<em>see reflection.md</em>)
+      </small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
